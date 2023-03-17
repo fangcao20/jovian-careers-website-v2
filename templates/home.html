@@ -10,17 +10,25 @@
         width: 100%;
         height: 360px;
         object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+      <img class="img-fluid" id="banner" src="https://jovian-careers-website.fangcao20.repl.co/static/banner.jpg">
     <div class="container">
       <h1 class="text-center">Jovian Careers</h1>
-      <img class="img-fluid" id="banner" src="https://jovian-careers-website.fangcao20.repl.co/static/banner.jpg">
-      <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-      <p class="lead">
+      <div class="row" style="margin-bottom: 16px;">
+        <div class="col-md-6">
+          <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae turpis massa sed elementum tempus egestas sed sed risus. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Auctor neque vitae tempus quam. Varius quam quisque id diam vel quam elementum pulvinar. Donec massa sapien faucibus et molestie. Nisl nisi scelerisque eu ultrices. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Ac felis donec et odio pellentesque diam volutpat commodo sed. Porttitor leo a diam sollicitudin tempor id eu. Feugiat nisl pretium fusce id velit. Odio aenean sed adipiscing diam donec adipiscing. Id eu nisl nunc mi ipsum. Pretium lectus quam id leo in vitae turpis massa sed. In mollis nunc sed id semper risus in hendrerit.
       </p>
+        </div>
+        <div class="d-none d-md-block col-md-6" style="margin-top: 16px">
+          <img src="/static/people.jpg" style="height: 320px; border-radius: 4px;">
+        </div>
+      </div>
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
       <div class="lead">
         {% for job in jobs %}
@@ -28,9 +36,9 @@
         {% endfor %}
       </div>
       <div class="text-center">
-        <button class="btn btn-secondary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright 200, Jovian</p>
+        <a href="mailto:hello@jovian.ai?subject=Question&body=My%20question%3A%20%3Center%20question%20here%3E" type="button" class="btn btn-secondary btn-lg">Contact us</a>
       </div>
+      {% include 'footer.html' %}
     </div>
   </body>
 </html>
